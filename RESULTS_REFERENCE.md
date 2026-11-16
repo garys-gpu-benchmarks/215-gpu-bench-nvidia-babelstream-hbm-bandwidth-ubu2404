@@ -3,7 +3,7 @@
 **Main goal:** Measure sustained BabelStream HBM bandwidth  
 **Tools:** Compile babelstream.cu with nvcc; run bin/babelstream via collect_babelstream.py
 
-Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_142 · recorded 2026-11-16). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
+Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_143 · recorded 2026-11-16). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
 
 > Smoke runs use deliberately small sizes. They check that the workload installs and runs end to end; their numbers are not performance results. Baseline and extended are.
 
@@ -11,16 +11,16 @@ Reference results measured by the maintainer on the system shown in each section
 ## smoke
 
 - **System:** 1× NVIDIA H100 NVL (95830 MiB) · Intel(R) Xeon(R) Platinum 8452Y · Ubuntu 24.04.5 LTS · kernel 6.8.0-138-generic · driver 595.91.07
-- **Run:** 2026-11-16T11:20:51Z · status **PASS** (exit 0)
-- **Time (mm:ss):** setup 00:52 · benchmark 00:01 · whole run 00:59
-- **Source:** run 215_20261116_112051
+- **Run:** 2026-11-16T19:45:50Z · status **PASS** (exit 0)
+- **Time (mm:ss):** setup 00:54 · benchmark 00:01 · whole run 01:01
+- **Source:** run 215_20261116_194550
 - **Command:** `bash run_benchmark.sh --smoke --device-id 0 --block-size 256 --array-size 67108864 --warmup-iters 1 --num-iterations 20`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | Copy bandwidth (bandwidth_gb_s_copy) | 3295.352467 |
-| 2 | Mul bandwidth (bandwidth_gb_s_mul) | 3295.417271 |
-| 3 | Add bandwidth (bandwidth_gb_s_add) | 3626.552385 |
-| 4 | Triad bandwidth (bandwidth_gb_s_triad) | 3628.016048 |
-| 5 | Dot bandwidth (bandwidth_gb_s_dot) | 2617.575 |
+| 1 | Copy bandwidth (bandwidth_gb_s_copy) | 3295.530307 |
+| 2 | Mul bandwidth (bandwidth_gb_s_mul) | 3294.608158 |
+| 3 | Add bandwidth (bandwidth_gb_s_add) | 3627.231483 |
+| 4 | Triad bandwidth (bandwidth_gb_s_triad) | 3626.943992 |
+| 5 | Dot bandwidth (bandwidth_gb_s_dot) | 2618.054894 |
 <!-- /profile:smoke -->
